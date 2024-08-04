@@ -5,20 +5,20 @@
 class Smoothdb < Formula
   desc ""
   homepage ""
-  version "0.2.8"
+  version "0.2.9"
 
   on_macos do
     on_intel do
-      url "https://github.com/sted/smoothdb/releases/download/v0.2.8/smoothdb_Darwin_x86_64.tar.gz"
-      sha256 "b3f04f45d9b63f614608f0b8f2317a026d57a203123887db660aca1c436994e1"
+      url "https://github.com/sted/smoothdb/releases/download/v0.2.9/smoothdb_Darwin_x86_64.tar.gz"
+      sha256 "e1d4b6c74ddda5d25a2b68fe4b29a5827e39083bc55afb63a41eaf233dfaf4ee"
 
       def install
         bin.install "smoothdb"
       end
     end
     on_arm do
-      url "https://github.com/sted/smoothdb/releases/download/v0.2.8/smoothdb_Darwin_arm64.tar.gz"
-      sha256 "0cb93e276958ec5ab5ea991d75e44e5600a2815c919e6218208c3a93103f865d"
+      url "https://github.com/sted/smoothdb/releases/download/v0.2.9/smoothdb_Darwin_arm64.tar.gz"
+      sha256 "5527d90bb8f011591e179caa806b8da05a6dba74f175ec2114baa6db0564c82d"
 
       def install
         bin.install "smoothdb"
@@ -29,8 +29,8 @@ class Smoothdb < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sted/smoothdb/releases/download/v0.2.8/smoothdb_Linux_x86_64.tar.gz"
-        sha256 "3b421bf9fec56ccc21d5dc145b0247d06482a8ad38f6f7ce5934d59c8f65d878"
+        url "https://github.com/sted/smoothdb/releases/download/v0.2.9/smoothdb_Linux_x86_64.tar.gz"
+        sha256 "623fae44ed9664e08b6a91c2b121867809e006d49589f1fd57389c2b872f42c4"
 
         def install
           bin.install "smoothdb"
@@ -39,8 +39,8 @@ class Smoothdb < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sted/smoothdb/releases/download/v0.2.8/smoothdb_Linux_arm64.tar.gz"
-        sha256 "692251951d35c5e3062b6c51b63425e56153aac7d87aee20b4adbc70c7c34bd7"
+        url "https://github.com/sted/smoothdb/releases/download/v0.2.9/smoothdb_Linux_arm64.tar.gz"
+        sha256 "259de1817b9f06d64018098f4fbea6cbcb1e255537bfe95cb4ee087fdf0e380d"
 
         def install
           bin.install "smoothdb"
