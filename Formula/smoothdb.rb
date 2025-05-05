@@ -5,20 +5,20 @@
 class Smoothdb < Formula
   desc ""
   homepage ""
-  version "0.2.11"
+  version "0.3.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/sted/smoothdb/releases/download/v0.2.11/smoothdb_Darwin_x86_64.tar.gz"
-      sha256 "797d283bd324b078e6f0aac8f2ee1598923d46d4b7d3f02367eeb03ab9d0238b"
+    if Hardware::CPU.intel?
+      url "https://github.com/sted/smoothdb/releases/download/v0.3.0/smoothdb_Darwin_x86_64.tar.gz"
+      sha256 "3374438b2014512b50b70d2cc3cae7e7e78df0c3e09731387a80cde36b1b033c"
 
       def install
         bin.install "smoothdb"
       end
     end
-    on_arm do
-      url "https://github.com/sted/smoothdb/releases/download/v0.2.11/smoothdb_Darwin_arm64.tar.gz"
-      sha256 "2a81e302d41f254a8b9b33f868269653b9cfd8f394506d52a2a8e362424a9742"
+    if Hardware::CPU.arm?
+      url "https://github.com/sted/smoothdb/releases/download/v0.3.0/smoothdb_Darwin_arm64.tar.gz"
+      sha256 "01c27b8d539f868ee6a0bede455f9b15684158b910ffe52d68c51d52b2d00e6f"
 
       def install
         bin.install "smoothdb"
@@ -27,24 +27,18 @@ class Smoothdb < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sted/smoothdb/releases/download/v0.2.11/smoothdb_Linux_x86_64.tar.gz"
-        sha256 "1799d28f84997965915f173cd298a2d1e3f7b06e41ed3d9d24824f5694861dd5"
-
-        def install
-          bin.install "smoothdb"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/sted/smoothdb/releases/download/v0.3.0/smoothdb_Linux_x86_64.tar.gz"
+      sha256 "a591a69ff492014263faecf03c35c54fa780f031d0edae50dd9527e38306aa04"
+      def install
+        bin.install "smoothdb"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sted/smoothdb/releases/download/v0.2.11/smoothdb_Linux_arm64.tar.gz"
-        sha256 "e09fb128945dd266cfa3221def88475417895ed05da3666a7a761c1d25b8c73e"
-
-        def install
-          bin.install "smoothdb"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/sted/smoothdb/releases/download/v0.3.0/smoothdb_Linux_arm64.tar.gz"
+      sha256 "637ce900680986b78dc2ec3a1be3db22316d577819c1a3af7f673bd84bf642a8"
+      def install
+        bin.install "smoothdb"
       end
     end
   end
