@@ -5,20 +5,20 @@
 class Smoothdb < Formula
   desc ""
   homepage ""
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sted/smoothdb/releases/download/v0.6.0/smoothdb_Darwin_x86_64.tar.gz"
-      sha256 "f0c1f9d571964a250f0fd241892949f9576c6fae4a8cbeeeae41b1c0b5cb4c90"
+      url "https://github.com/sted/smoothdb/releases/download/v0.6.1/smoothdb_Darwin_x86_64.tar.gz"
+      sha256 "ae5764ad144687e65076be73b6f0982757d4b62222ebb1bc7f5daa409a2a1ae3"
 
       define_method(:install) do
         bin.install "smoothdb"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sted/smoothdb/releases/download/v0.6.0/smoothdb_Darwin_arm64.tar.gz"
-      sha256 "8a47f0a553b1684e976fcfe5faaaabbfb6f673bc9e2a4cc22f3c979e045de2c0"
+      url "https://github.com/sted/smoothdb/releases/download/v0.6.1/smoothdb_Darwin_arm64.tar.gz"
+      sha256 "65004eeb2872d357f9f431839dc089989c360dd96fb83fc5892226ad37d5eb2f"
 
       define_method(:install) do
         bin.install "smoothdb"
@@ -28,15 +28,15 @@ class Smoothdb < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sted/smoothdb/releases/download/v0.6.0/smoothdb_Linux_x86_64.tar.gz"
-      sha256 "b1be873c8e433eb19e172c5324b2dd8056cb0af94d5d3881dd40cf8df24d2493"
+      url "https://github.com/sted/smoothdb/releases/download/v0.6.1/smoothdb_Linux_x86_64.tar.gz"
+      sha256 "60339af078f9426ee1672687b05015d9fb7f422657aa476a0bbfa50b6dd0f204"
       define_method(:install) do
         bin.install "smoothdb"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sted/smoothdb/releases/download/v0.6.0/smoothdb_Linux_arm64.tar.gz"
-      sha256 "4f3364d0c92e18d71311dda0b2a5a55aff3fe0a10098a5f9ba12d0a7389135c2"
+      url "https://github.com/sted/smoothdb/releases/download/v0.6.1/smoothdb_Linux_arm64.tar.gz"
+      sha256 "4790aead3b5fe12328c8f1aadfb93c64c4600068c39e625f73f13a133324e14b"
       define_method(:install) do
         bin.install "smoothdb"
       end
